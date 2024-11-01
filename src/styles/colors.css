@@ -1,0 +1,11 @@
+
+:root {
+  --primary-bg: #131516;
+  --secondary-bg: #1b1d1e;
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --blog: #ff2e63;
+  --blog-secondary: #ca244d;
+  --acsent-color: rgb(189, 189, 189);
+  --navbar-shadow: rgba(255, 255, 255, 0.17);
+}

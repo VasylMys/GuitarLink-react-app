@@ -1,0 +1,98 @@
+.advantage-section {
+  padding-bottom: 100px;
+
+}
+
+.whycm-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.whycm-container p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--acsent-color);
+}
+
+.adv-section {
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+
+.whycm-container .adv-section {
+  background-color: var(--secondary-bg);
+  border-radius: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: auto;
+  padding: 80px 20px;
+  width: 80%;
+}
+
+.whycm-container .adv-section .adv-card {
+  background: var(--primary-bg);
+  border-radius: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 170px;
+  justify-content: center;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  width: 200px;
+  cursor: pointer;
+  perspective: 100px;
+}
+
+.whycm-container .adv-section .adv-card img {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+
+.adv-desc {
+  text-align: left;
+  font-size: 18px;
+  font-family: Poppins, "sans-serif";
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.adv-card:hover {
+  background: rgba(255, 46, 99, 1) !important;
+  transform: scale(1.05);
+  color: #fff !important;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  .whycm-container h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .whycm-container p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .whycm-container h1 {
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+  }
+
+  .whycm-container p {
+    font-size: 1.2rem;
+    margin: auto auto 1.5rem;
+    text-align: center;
+    width: 90%;
+  }
+}

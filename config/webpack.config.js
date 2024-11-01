@@ -26,11 +26,19 @@ const config = {
                     },
                 ],
             },
+            {
+                test: /\.css$/, // Вказує на всі файли з розширенням .css
+                use: ['style-loader', 'css-loader'], // Використовує style-loader і css-loader
+            },
         ],
     },
     resolve: {
         extensions: ['.js', '.jsx'],
     },
+    devServer: {
+        historyApiFallback: true, // Додає підтримку клієнтської маршрутизації
+      }
+      
 };
 
 module.exports = config;
