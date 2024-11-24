@@ -22,6 +22,7 @@ const config = {
                         loader: 'babel-loader',
                         options: {
                             presets: ['@babel/preset-env', '@babel/preset-react'],
+                            plugins: ['istanbul'],
                         },
                     },
                 ],
@@ -37,8 +38,7 @@ const config = {
     },
     devServer: {
         historyApiFallback: true, // Додає підтримку клієнтської маршрутизації
-      }
-      
+    },
 };
 
 module.exports = config;

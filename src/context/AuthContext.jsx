@@ -7,24 +7,25 @@ const AuthContext = createContext();
 
 export const useAuthContext = () => useContext(AuthContext);
 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+export const AuthProvider = ({ children, testUser, testLogout }) => {
+    const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
-  }, []);
+    useEffect(() => {
+        if (!testUser) {
+            const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+                setUser(currentUser);
+            });
+            return () => unsubscribe();
+        } else {
+            setUser(testUser);
+        }
+    }, []);
 
-  const logout = async () => {
-    await signOut(auth);
-    setUser(null);
-  };
+    const logout = async () => {
+        if (testLogout) testLogout();
+        else await signOut(auth);
+        setUser(null);
+    };
 
-  return (
-    <AuthContext.Provider value={{ user, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
+    return <AuthContext.Provider value={{ user, logout }}>{children}</AuthContext.Provider>;
 };
